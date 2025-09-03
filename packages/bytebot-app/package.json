@@ -1,0 +1,41 @@
+{
+  "name": "bytebot-app",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "electron dist/main.js",
+    "dev": "tsc && electron dist/main.js",
+    "package": "electron-builder",
+    "test": "echo 'No tests'"
+  },
+  "dependencies": {
+    "electron": "^29.4.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.7.3",
+    "@types/node": "^22.13.4"
+  },
+  "build": {
+    "appId": "ai.bytebot.desktop",
+    "productName": "Bytebot",
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"]
+    }
+  }
+}

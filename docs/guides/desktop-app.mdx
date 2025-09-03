@@ -1,0 +1,24 @@
+---
+title: "Desktop App"
+description: "Install and run the Bytebot desktop application"
+---
+
+# Bytebot Desktop App
+
+The desktop app packages **bytebot-agent**, **bytebotd** and the web UI into a single Electron application.
+
+## Required Permissions
+
+- **Network access** – communicate with the agent services.
+- **File system** – store data in the workspace directory.
+- **Screen recording & accessibility** (macOS) – allow desktop control.
+
+Grant these when prompted by your operating system.
+
+## Post-install Prompts
+
+On first launch the app creates a workspace directory and displays a setup message. The OS may ask for the permissions above; approve them so Bytebot can function correctly.
+
+## Workspace Directory
+
+All data is stored in a dedicated workspace located in your app data folder (e.g., `~/Library/Application Support/bytebot` on macOS or `%APPDATA%\\bytebot` on Windows).
